@@ -1,0 +1,17 @@
+<div class="prisoner-search__results-grid" data-test="prisoner-search-results-grid">
+  {% for prisoner in data['dpsMalePrisoners'] %}
+    <div class="prisoner-search__results-grid__prisoner">
+      <article class="prisoner-search__results-grid__card">
+        <div class="prisoner-panel">
+          <img src="/public/images/prisoner-images/{{ prisoner.thumbnail }}"
+            alt="Image of {{ prisoner.name }}" class="prisoner-panel__image" loading="lazy">
+          <div class="prisoner-panel__details">
+            <a href="/prisoner-profile?prisonNumber={{ prisoner.prison_number }}" class="govuk-link govuk-!-font-size-19">{{ prisoner.name }}</a>
+            <p class="govuk-body govuk-!-margin-bottom-0">{{ prisoner.prison_number }}</p>
+            <p class="govuk-body govuk-!-margin-bottom-0">{{ prisoner.location }}</p>
+          </div>
+        </div>
+      </article>
+    </div>
+  {% endfor %}
+</div>

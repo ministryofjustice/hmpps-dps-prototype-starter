@@ -1,0 +1,37 @@
+{% macro alertStatusClass(label) -%}
+  {%- set alertLabel = label | lower -%}
+  {%- if alertLabel in ["acct open", "acct post closure"] -%}alert-status--self-harm
+  {%- elif alertLabel == "arsonist" -%}alert-status--security
+  {%- elif alertLabel == "care experienced" -%}alert-status--care-leaver
+  {%- elif alertLabel == "chemical attacker" -%}alert-status--security
+  {%- elif alertLabel == "concerted indiscipline" -%}alert-status--security
+  {%- elif alertLabel == "conflict" -%}alert-status--risk
+  {%- elif alertLabel == "controlled unlock" -%}alert-status--security
+  {%- elif alertLabel == "corruptor" -%}alert-status--security
+  {%- elif alertLabel == "csip" -%}alert-status--other
+  {%- elif alertLabel in ["e-list", "e-list heightened"] -%}alert-status--security
+  {%- elif alertLabel == "escape risk" -%}alert-status--security
+  {%- elif alertLabel == "gang member" -%}alert-status--security
+  {%- elif alertLabel == "hidden disability" -%}alert-status--medical
+  {%- elif alertLabel == "hostage taker" -%}alert-status--security
+  {%- elif alertLabel == "involved in 2024 civil disorder" -%}alert-status--security
+  {%- elif alertLabel == "isolated" -%}alert-status--isolated-prisoner
+  {%- elif alertLabel == "no one-to-one" -%}alert-status--risk
+  {%- elif alertLabel == "peep" -%}alert-status--medical
+  {%- elif alertLabel == "protective isolation unit" -%}alert-status--protective-isolation-unit
+  {%- elif alertLabel == "quarantined" -%}alert-status--quarantined
+  {%- elif alertLabel == "racist" -%}alert-status--security
+  {%- elif alertLabel == "refusing to shield" -%}alert-status--refusing-to-shield
+  {%- elif alertLabel == "reverse cohorting unit" -%}alert-status--reverse-cohorting-unit
+  {%- elif alertLabel == "risk to females" -%}alert-status--security
+  {%- elif alertLabel == "risk to known adults" -%}alert-status--risk-to-known-adults
+  {%- elif alertLabel == "risk to lgbt" -%}alert-status--risk
+  {%- elif alertLabel == "shielding unit" -%}alert-status--shielding-unit
+  {%- elif alertLabel == "staff assaulter" -%}alert-status--security
+  {%- elif alertLabel == "tact" -%}alert-status--security
+  {%- elif alertLabel == "veteran" -%}alert-status--ex-armed-forces
+  {%- elif alertLabel == "violent" -%}alert-status--security
+  {%- elif alertLabel == "visor" -%}alert-status--multicase alert-status--visor
+  {%- else -%}alert-status--other
+  {%- endif -%}
+{%- endmacro %}

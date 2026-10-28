@@ -1,0 +1,13 @@
+diff --git a/node_modules/govuk-prototype-kit/lib/build.js b/node_modules/govuk-prototype-kit/lib/build.js
+index f40a47f..e463070 100644
+--- a/node_modules/govuk-prototype-kit/lib/build.js
++++ b/node_modules/govuk-prototype-kit/lib/build.js
+@@ -203,7 +203,7 @@ function _generateCssSync (sassPath, cssPath, options = {}) {
+     .forEach(file => {
+       const result = sass.compile(path.join(sassPath, file), {
+         quietDeps: true,
+-        loadPaths: [projectDir],
++        loadPaths: [projectDir, path.join(projectDir, 'node_modules')],
+         sourceMap: true,
+         sourceMapIncludeSources: true,
+         style: 'expanded',

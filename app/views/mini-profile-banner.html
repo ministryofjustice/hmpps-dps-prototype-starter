@@ -1,0 +1,37 @@
+{% extends "layouts/dps.html" %}
+
+{% set pageName="Prisoner Profile" %}
+{% set version="v1" %}
+{% set bodyClasses = 'dps govuk-body' %}
+
+{% block beforeContent %}
+<div class="prisoner-profile-breadcrumbs govuk-!-display-none-print">
+
+  <div class="hmpps-mini-banner">
+    <img src="/public/images/prisoner-images/prisoner_2.jpg" alt="Photo of Davamin, Aeticake" class="prisoner-photo--small">
+    <dl>
+      <dt class="govuk-visually-hidden">Prisoner</dt>
+      <dd>
+        <a href="#" class="app-link--print-plain-text">
+          <strong>
+            Davamin, Aeticake
+          </strong>
+        </a>
+        <br>
+        G8953GQ
+      </dd>
+    </dl>
+    <dl>
+      <dt>Location</dt>
+      <dd>
+        A-3-001
+      </dd>
+    </dl>
+    <div class="dps-mini-profile-header--align-right">
+    </div>
+  </div>
+
+</div>
+
+
+{% endblock %}

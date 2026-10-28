@@ -1,0 +1,26 @@
+.hmpps-mini-banner {
+  background-color: govuk-colour('light-grey');
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+
+  margin-bottom: 30px;
+  padding: 15px;
+
+  dl {
+    margin: 0;
+
+    dt {
+      font-weight: 700;
+    }
+
+    dd {
+      margin: 0;
+      
+    }
+  }
+  .prisoner-photo--small {
+    width: 80px
+}
+
+}

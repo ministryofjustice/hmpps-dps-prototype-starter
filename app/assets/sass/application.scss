@@ -1,0 +1,41 @@
+//
+// For guidance on how to add CSS and SCSS see:
+// https://prototype-kit.service.gov.uk/docs/adding-css-javascript-and-images
+//
+
+// Add extra styles here
+
+$govuk-global-styles: true;
+$path: "/public/images/";
+
+$moj-page-width: 1170px;
+$govuk-page-width: $moj-page-width;
+
+p code, li code {
+    color: #d13118;
+    background-color: #f3f2f1;
+    padding: 0 5px;
+}
+
+// DPS styles
+@import "./dps/_dps.scss";
+@import "./dps/_dps-home-page.scss";
+@import "./dps/_dps-header-bar.scss";
+@import "./dps/_dps-footer.scss";
+@import "./dps/_prisoner-search.scss";
+@import "./dps/_horizontal-content.scss";
+@import "./dps/alert-flags.scss";
+
+@import './dps/prisoner-profile/components/_actions-block.scss';
+@import './dps/prisoner-profile/components/_alerts.scss';
+@import './dps/prisoner-profile/components/_miniCard.scss';
+@import './dps/prisoner-profile/components/_miniSummary.scss';
+@import './dps/prisoner-profile/components/_profile-banner.scss';
+@import './dps/prisoner-profile/components/_status.scss';
+@import './dps/prisoner-profile/components/_summary-card.scss';
+
+@import './dps/mini-banner/miniBanner.scss';
+
+@import './dps/prisoner-profile/helpers';
+@import './dps/prisoner-profile/pages/overview';
+
